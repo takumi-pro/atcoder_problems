@@ -86,6 +86,7 @@ import re
 import html
 import chromedriver_binary
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from time import sleep
 import subprocess
 
@@ -123,7 +124,8 @@ for submissions in newestSubmits.values():
         driver.get(sub_url)
         
         # 提出コードの取得
-        code = driver.find_element_by_id("submission-code") 
+        # code = driver.find_element_by_id("submission-code") 
+        code = driver.find_element(By.ID, "submission-code")
         
         # code.text は提出時に含めていない空白が期待に反して含まれてしまう
         # 空白はシンタックスハイライティングによるものであるように見える
