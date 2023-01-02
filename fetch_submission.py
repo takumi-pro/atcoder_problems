@@ -169,7 +169,7 @@ else:
     import datetime
 
     dt_now = datetime.datetime.now()
-    repo_url = "https://github.com/tishii2479/atcoder.git"
+    repo_url = "https://github.com/takumi-pro/atcoder_problems.git"
     repo = git.Repo()
     repo.git.add("submissions/*")
     repo.git.commit("submissions/*", message="add submission: " + dt_now.strftime('%Y/%m/%d %H:%M:%S'))
